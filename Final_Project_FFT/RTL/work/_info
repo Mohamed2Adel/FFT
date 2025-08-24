@@ -1,0 +1,277 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/questasim64_2021.1/examples
+T_opt
+!s110 1754999487
+Ve@c3Z_Gm4EXUE5J=F_e_h3
+04 7 4 work fft8_tb fast 0
+=1-c8e265b278a7-689b2abf-145-3d88
+Z2 !s124 OEM100
+Z3 o-quiet -auto_acc_if_foreign -work work +acc
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;2021.1;73
+R1
+T_opt1
+!s110 1754946338
+V53e>2G9_igNffWH]`KA8L0
+04 11 4 work tb_fft8_seq fast 0
+=3-c8e265b278a7-689a5b22-eb-1100
+R2
+R3
+R4
+n@_opt1
+R5
+R1
+vbutterfly
+Z6 !s110 1755003212
+!i10b 1
+!s100 B1O^1GZKl0BaiURfJQb;[0
+Ib05@g=7;m[iZ48YZ]XRSV3
+Z7 dD:/ADI_intern/Final_Project_FFT/RTL
+w1754946416
+8butterfly.v
+Fbutterfly.v
+!i122 238
+L0 1 31
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z10 !s108 1755003212.000000
+!s107 butterfly.v|
+!s90 -reportprogress|300|-cover|bcst|butterfly.v|
+!i113 0
+Z11 !s102 -cover bcst
+Z12 o-cover bcst -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+vfft8
+!s110 1754945277
+!i10b 1
+!s100 <2gGHfHSfzL`T@=2dBK0i0
+I3XQdTb8B_JF^En=359Q;X0
+R7
+w1754945245
+Z13 8D:/ADI_intern/Final_Project_FFT/RTL/fft8_top.v
+Z14 FD:/ADI_intern/Final_Project_FFT/RTL/fft8_top.v
+!i122 103
+L0 80 176
+R8
+R9
+r1
+!s85 0
+31
+!s108 1754945277.000000
+Z15 !s107 D:/ADI_intern/Final_Project_FFT/RTL/fft8_top.v|
+Z16 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ADI_intern/Final_Project_FFT/RTL/fft8_top.v|
+!i113 0
+Z17 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+vfft8_comb
+!s110 1754941059
+!i10b 1
+!s100 PPRJi_PT[h6X?JcBbzI;42
+I?[9eO^G0YO=iV5jRfiZiT1
+R7
+w1754941052
+R13
+R14
+!i122 27
+L0 84 132
+R8
+R9
+r1
+!s85 0
+31
+!s108 1754941059.000000
+R15
+R16
+!i113 0
+R17
+R4
+vfft8_ctrl
+R6
+!i10b 1
+!s100 9aIgC_7W;LJWZR>6c:j<N3
+I]QbXlzE0kTLV]go3nMPb:0
+R7
+w1754946381
+8fft8_ctrl.v
+Ffft8_ctrl.v
+!i122 236
+L0 5 103
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 fft8_ctrl.v|
+!s90 -reportprogress|300|-cover|bcst|fft8_ctrl.v|
+!i113 0
+R11
+R12
+R4
+vfft8_seq
+Z18 !s110 1754946334
+!i10b 1
+!s100 7A4VXDmJ^OC0zX_OP=WAO2
+I?70GA6WN4R:=L1Ti:VZJU3
+R7
+w1754946157
+R13
+R14
+!i122 121
+L0 83 199
+R8
+R9
+r1
+!s85 0
+31
+Z19 !s108 1754946334.000000
+R15
+R16
+!i113 0
+R17
+R4
+vfft8_tb
+R6
+!i10b 1
+!s100 fCnlLDVSZkcm:g]MaF`D81
+IjeE7RXA;bhzmGg00]TmL52
+R7
+w1754998742
+8fft_testbench.v
+Ffft_testbench.v
+!i122 240
+L0 113 114
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 fft_testbench.v|
+!s90 -reportprogress|300|fft_testbench.v|
+!i113 0
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+vfft8_top
+R6
+!i10b 1
+!s100 24Q[LTh=010Ja?R<h[ld_2
+I2>NnM1Ybo82@kjeh:6m?<2
+R7
+w1754947270
+8fft8_top.v
+Ffft8_top.v
+!i122 235
+L0 4 73
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 fft8_top.v|
+!s90 -reportprogress|300|-cover|bcst|fft8_top.v|
+!i113 0
+R11
+R12
+R4
+vregfile_fft
+R6
+!i10b 1
+!s100 EDZCU^2_V3C2nj?KM1L153
+IfE7agDoN7k5C6Fdl]_YSJ0
+R7
+w1754946407
+8regfile_fft.v
+Fregfile_fft.v
+!i122 237
+L0 5 78
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 regfile_fft.v|
+!s90 -reportprogress|300|-cover|bcst|regfile_fft.v|
+!i113 0
+R11
+R12
+R4
+vtb_fft8_seq
+R18
+!i10b 1
+!s100 h38i1[8mm6k44X`G_U?1I1
+IKoeCe;I^3GSfKcOf47>`A0
+R7
+w1754946329
+8D:/ADI_intern/Final_Project_FFT/RTL/fft_testbench.v
+FD:/ADI_intern/Final_Project_FFT/RTL/fft_testbench.v
+!i122 120
+L0 121 107
+R8
+R9
+r1
+!s85 0
+31
+R19
+!s107 D:/ADI_intern/Final_Project_FFT/RTL/fft_testbench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ADI_intern/Final_Project_FFT/RTL/fft_testbench.v|
+!i113 0
+R17
+R4
+vtwiddle_rom
+R6
+!i10b 1
+!s100 ]JEMm7Zh6RP62`NU7=XO32
+IeoL<Q:_95=IVAQQ`Db43M1
+R7
+w1754946413
+8twiddle_rom.v
+Ftwiddle_rom.v
+!i122 239
+L0 6 41
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 twiddle_rom.v|
+!s90 -reportprogress|300|-cover|bcst|twiddle_rom.v|
+!i113 0
+R11
+R12
+R4

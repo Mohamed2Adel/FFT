@@ -1,0 +1,399 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /fft8_tb/dut/ctrl
+=== Design Unit: work.fft8_ctrl
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        14        13         1    92.85%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fft8_tb/dut/ctrl
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft8_ctrl.v
+------------------------------------IF Branch------------------------------------
+    40                                        19     Count coming in to IF
+    40              1                          2     
+    45              1                         17     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    46                                        17     Count coming in to CASE
+    47              1                          4     
+    56              1                         12     
+    69              1                          1     
+                                         ***0***     All False Count
+Branch totals: 3 hits of 4 branches = 75.00%
+
+------------------------------------IF Branch------------------------------------
+    49                                         4     Count coming in to IF
+    49              1                          1     
+                                               3     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    57                                        12     Count coming in to IF
+    57              1                          3     
+    64              1                          9     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    59                                         3     Count coming in to IF
+    59              1                          1     
+    61              1                          2     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    88                                        15     Count coming in to IF
+    88              1                         12     
+                                               3     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       3         3         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /fft8_tb/dut/ctrl --
+
+  File fft8_ctrl.v
+----------------Focused Condition View-------------------
+Line       57 Item    1  (butterfly_idx == 3)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       59 Item    1  (stage == 2)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       88 Item    1  (state == 1)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      32        32         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fft8_tb/dut/ctrl --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft8_ctrl.v
+    39              1                         19     
+    41              1                          2     
+    42              1                          2     
+    43              1                          2     
+    44              1                          2     
+    48              1                          4     
+    50              1                          1     
+    51              1                          1     
+    52              1                          1     
+    58              1                          3     
+    60              1                          1     
+    62              1                          2     
+    65              1                          9     
+    70              1                          1     
+    71              1                          1     
+    78              1                         15     
+    80              1                         15     
+    81              1                         15     
+    82              1                         15     
+    83              1                         15     
+    84              1                         15     
+    85              1                         15     
+    86              1                         15     
+    89              1                         12     
+    90              1                         12     
+    93              1                         12     
+    94              1                         12     
+    97              1                         12     
+    98              1                         12     
+    99              1                         12     
+    100             1                         12     
+    103             1                         12     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        182        58       124    31.86%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /fft8_tb/dut/ctrl --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                  butterfly_idx[2]           0           0        0.00 
+                                      half_m[31-3]           0           0        0.00 
+                                         half_m[2]           0           1       50.00 
+                                         half_m[0]           1           0       50.00 
+                                           m[31-4]           0           0        0.00 
+                                              m[3]           0           1       50.00 
+                                              m[1]           1           0       50.00 
+                                              m[0]           0           0        0.00 
+                                               rst           1           0       50.00 
+                                          stage[1]           0           1       50.00 
+
+Total Node Count     =         91 
+Toggled Node Count   =         26 
+Untoggled Node Count =         65 
+
+Toggle Coverage      =      31.86% (58 of 182 bins)
+
+=================================================================================
+=== Instance: /fft8_tb/dut/rom
+=== Design Unit: work.twiddle_rom
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         5         4         1    80.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fft8_tb/dut/rom
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File twiddle_rom.v
+------------------------------------CASE Branch------------------------------------
+    22                                         9     Count coming in to CASE
+    23              1                          4     
+    27              1                          1     
+    31              1                          3     
+    35              1                          1     
+    39              1                    ***0***     
+Branch totals: 4 hits of 5 branches = 80.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      11         9         2    81.81%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fft8_tb/dut/rom --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File twiddle_rom.v
+    21              1                          9     
+    24              1                          4     
+    25              1                          4     
+    28              1                          1     
+    29              1                          1     
+    32              1                          3     
+    33              1                          3     
+    36              1                          1     
+    37              1                          1     
+    40              1                    ***0***     
+    41              1                    ***0***     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         52        44         8    84.61%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /fft8_tb/dut/rom --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                           w_im[7]           0           0        0.00 
+                                         w_im[5-4]           0           0        0.00 
+                                           w_im[2]           0           0        0.00 
+
+Total Node Count     =         26 
+Toggled Node Count   =         22 
+Untoggled Node Count =          4 
+
+Toggle Coverage      =      84.61% (44 of 52 bins)
+
+=================================================================================
+=== Instance: /fft8_tb/dut/regs
+=== Design Unit: work.regfile_fft
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         8         8         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fft8_tb/dut/regs
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File regfile_fft.v
+------------------------------------IF Branch------------------------------------
+    50                                        24     Count coming in to IF
+    50              1                          2     
+    55              1                         22     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    56                                        22     Count coming in to IF
+    56              1                          8     
+    59              1                         14     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    60                                        14     Count coming in to IF
+    60              1                         12     
+                                               2     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    64                                        14     Count coming in to IF
+    64              1                         12     
+                                               2     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      18        18         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fft8_tb/dut/regs --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File regfile_fft.v
+    49              1                         24     
+    51              1                          2     
+    51              2                         16     
+    52              1                         16     
+    53              1                         16     
+    57              1                          8     
+    58              1                          8     
+    61              1                         12     
+    62              1                         12     
+    65              1                         12     
+    66              1                         12     
+    73              1                         43     
+    74              1                         43     
+    75              1                         43     
+    76              1                         43     
+    77              1                         43     
+    78              1                         43     
+    79              1                         43     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        398       330        68    82.91%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /fft8_tb/dut/regs --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                           i[31-0]           0           0        0.00 
+                                      load_addr[0]           0           1       50.00 
+                                        load_re[7]           0           1       50.00 
+                                       out_addr[2]           0           1       50.00 
+                                               rst           1           0       50.00 
+
+Total Node Count     =        199 
+Toggled Node Count   =        163 
+Untoggled Node Count =         36 
+
+Toggle Coverage      =      82.91% (330 of 398 bins)
+
+=================================================================================
+=== Instance: /fft8_tb/dut/bfly
+=== Design Unit: work.butterfly
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       8         8         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fft8_tb/dut/bfly --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File butterfly.v
+    18              1                         28     
+    19              1                         28     
+    22              1                         28     
+    23              1                         28     
+    26              1                         54     
+    27              1                         54     
+    28              1                         54     
+    29              1                         54     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        384       364        20    94.79%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /fft8_tb/dut/bfly --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                        mult_im[0]           0           0        0.00 
+                                        mult_im[4]           0           0        0.00 
+                                        mult_im[7]           0           0        0.00 
+                                        mult_re[0]           0           0        0.00 
+                                        mult_re[4]           0           0        0.00 
+                                        mult_re[6]           0           0        0.00 
+                                           w_im[2]           0           0        0.00 
+                                         w_im[4-5]           0           0        0.00 
+                                           w_im[7]           0           0        0.00 
+
+Total Node Count     =        192 
+Toggled Node Count   =        182 
+Untoggled Node Count =         10 
+
+Toggle Coverage      =      94.79% (364 of 384 bins)
+
+=================================================================================
+=== Instance: /fft8_tb/dut
+=== Design Unit: work.fft8_top
+=================================================================================
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        390       378        12    96.92%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /fft8_tb/dut --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                     data_in_re[7]           0           1       50.00 
+                                      load_addr[0]           0           1       50.00 
+                                       out_addr[2]           0           1       50.00 
+                                               rst           1           0       50.00 
+                                          tw_im[2]           0           0        0.00 
+                                        tw_im[4-5]           0           0        0.00 
+                                          tw_im[7]           0           0        0.00 
+
+Total Node Count     =        195 
+Toggled Node Count   =        187 
+Untoggled Node Count =          8 
+
+Toggle Coverage      =      96.92% (378 of 390 bins)
+
+
+Total Coverage By Instance (filtered view): 91.75%
+

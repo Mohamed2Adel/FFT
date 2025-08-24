@@ -1,0 +1,55 @@
+# compile_dut_tb_cov.do
+# ====== COMPILE DUT WITH COVERAGE ======
+vlog -cover bcst fft8_top.v
+vlog -cover bcst fft8_ctrl.v
+vlog -cover bcst regfile_fft.v
+vlog -cover bcst butterfly.v
+vlog -cover bcst twiddle_rom.v
+
+# ====== COMPILE TESTBENCH WITHOUT COVERAGE ======
+vlog fft_testbench.v
+
+# ====== LOAD SIMULATION WITH COVERAGE ======
+vsim -coverage -voptargs=+acc work.fft8_tb
+
+
+# ====== ADD WAVES ======
+
+# ====== ADD WAVES ======
+# ====== ADD WAVES ======
+
+add wave -position insertpoint  \
+sim:/fft8_tb/N \
+sim:/fft8_tb/WIDTH \
+sim:/fft8_tb/FRACTION \
+sim:/fft8_tb/clk \
+sim:/fft8_tb/rst \
+sim:/fft8_tb/start \
+sim:/fft8_tb/load \
+sim:/fft8_tb/load_addr \
+sim:/fft8_tb/out_addr \
+sim:/fft8_tb/data_in_re \
+sim:/fft8_tb/data_in_im \
+sim:/fft8_tb/done \
+sim:/fft8_tb/data_out_re \
+sim:/fft8_tb/data_out_im \
+sim:/fft8_tb/input_data \
+sim:/fft8_tb/expected_data \
+sim:/fft8_tb/bit_rev_map \
+sim:/fft8_tb/i \
+sim:/fft8_tb/idx
+
+add wave -position insertpoint  \
+sim:/fft8_tb/dut/regs/mem_re \
+sim:/fft8_tb/dut/regs/mem_im
+
+
+# ====== RUN SIMULATION ======
+run -all
+
+# ====== SAVE COVERAGE REPORT ======
+coverage save fft8_cov.ucdb
+coverage report -details -output fft8_cov_report.txt
+
+
+

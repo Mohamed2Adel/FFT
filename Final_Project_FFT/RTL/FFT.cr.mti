@@ -1,0 +1,43 @@
+D:/ADI_intern/Final_Project_FFT/RTL/fft8_ctrl.v {1 {vlog -work work -vopt -stats=none D:/ADI_intern/Final_Project_FFT/RTL/fft8_ctrl.v
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module fft8_ctrl
+
+Top level modules:
+	fft8_ctrl
+
+} {} {}} D:/ADI_intern/Final_Project_FFT/RTL/butterfly.v {1 {vlog -work work -vopt -stats=none D:/ADI_intern/Final_Project_FFT/RTL/butterfly.v
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module butterfly
+
+Top level modules:
+	butterfly
+
+} {} {}} D:/ADI_intern/Final_Project_FFT/RTL/regfile_fft.v {1 {vlog -work work -vopt -stats=none D:/ADI_intern/Final_Project_FFT/RTL/regfile_fft.v
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module regfile_fft
+
+Top level modules:
+	regfile_fft
+
+} {} {}} D:/ADI_intern/Final_Project_FFT/RTL/twiddle_rom.v {1 {vlog -work work -vopt -stats=none D:/ADI_intern/Final_Project_FFT/RTL/twiddle_rom.v
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module twiddle_rom
+
+Top level modules:
+	twiddle_rom
+
+} {} {}} D:/ADI_intern/Final_Project_FFT/RTL/fft8_top.v {1 {vlog -work work -vopt -stats=none D:/ADI_intern/Final_Project_FFT/RTL/fft8_top.v
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module fft8_top
+
+Top level modules:
+	fft8_top
+
+} {} {}} D:/ADI_intern/Final_Project_FFT/RTL/fft_testbench.v {1 {vlog -work work -vopt -stats=none D:/ADI_intern/Final_Project_FFT/RTL/fft_testbench.v
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module fft8_tb
+
+Top level modules:
+	fft8_tb
+
+} {} {}}

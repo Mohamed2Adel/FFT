@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<h1>Instrumentation Results for fft_prepared_mex</h1>
+<h2>Summary</h2>
+<p>To re-create this report:</p>
+<pre>  showInstrumentationResults fft_prepared_mex</pre>
+
+<p>MEX-function name:</p>
+<pre>fft_prepared_mex</pre>
+<p>Timestamp:</p>
+<pre>Sun Aug 24 11:50:33 2025</pre>
+<p>To open this report from the MATLAB command line:</p>
+<pre> web('-browser','H:\ADI_intern\Final_Project_FFT\instrumentation\fft_prepared_mex\html\printable.html')</pre>
+
+
+<h2>Function fft_prepared </h2>
+
+<pre>
+function X = fft_prepared(x)
+    N = 8;
+    stages = 3;
+    
+    % Preallocate output X as complex
+    X = complex(zeros(1, N));  % <-- force complex for codegen compatibility
+
+    % Bit-reversal for N = 8
+    bitrev = [1 5 3 7 2 6 4 8];
+    x = x(bitrev);
+
+    X(:) = x;
+
+    % Use persistent variable for twiddle factors
+    persistent W;
+    if isempty(W)
+        W = exp(-2i * pi * (0:N/2 - 1) / N);  % Precompute twiddle factors
+    end
+
+    % Loop stages
+    for s = 1:stages
+        m = 2^s;
+        half_m = m / 2;
+        for k = 1:m:N
+            for j = 0:half_m-1
+                idx1 = k + j;
+                idx2 = k + j + half_m;
+
+                % Twiddle factor from precomputed W
+                tw = W(mod(j * (N / m), N/2) + 1);
+
+                t = tw * X(idx2);
+                u = X(idx1);
+
+                X(idx1) = u + t;
+                X(idx2) = u - t;
+            end
+        end
+    end
+end
+</pre>
+<table style="border-collapse: collapse; border: solid;" border="1">
+<caption><b>Logged Variables for fft_prepared</b></caption>
+<tr><th>Variable</th><th>Type</th><th>Size</th><th>Class</th><th>Complex</th><th>Signedness</th><th>WL</th><th>FL</th><th>Percent of<br>Current Range</th><th>Always<br>Whole Number</th><th>SimMin</th><th>SimMax</th></tr>
+<tr><td><code>N</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>8</code></td><td><code>8</code></td></tr>
+<tr><td><code>W</code></td><td><code>Persistent</code></td><td><code>1&nbsp;x&nbsp;4</code></td><td><code>double</code></td><td><code>Yes</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code>No</code></td><td><code>-1</code></td><td><code>1</code></td></tr>
+<tr><td><code>X</code></td><td><code>Output</code></td><td><code>1&nbsp;x&nbsp;8</code></td><td><code>double</code></td><td><code>Yes</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code>No</code></td><td><code>-5.7265625</code></td><td><code>5.693598226612688</code></td></tr>
+<tr><td><code>bitrev</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;8</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>8</code></td></tr>
+<tr><td><code>half_m</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>4</code></td></tr>
+<tr><td><code>idx1</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>7</code></td></tr>
+<tr><td><code>idx2</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>2</code></td><td><code>8</code></td></tr>
+<tr><td><code>j</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>0</code></td><td><code>3</code></td></tr>
+<tr><td><code>k</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>7</code></td></tr>
+<tr><td><code>m</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>2</code></td><td><code>8</code></td></tr>
+<tr><td><code>s</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>3</code></td></tr>
+<tr><td><code>stages</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>3</code></td><td><code>3</code></td></tr>
+<tr><td><code>t</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>Yes</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code>No</code></td><td><code>-3.5161989548846684</code></td><td><code>4.1017717580547775</code></td></tr>
+<tr><td><code>tw</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>Yes</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code>No</code></td><td><code>-1</code></td><td><code>1</code></td></tr>
+<tr><td><code>u</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>Yes</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code>No</code></td><td><code>-3.6171875</code></td><td><code>3.84765625</code></td></tr>
+<tr><td><code>x</code></td><td><code>Input</code></td><td><code>1&nbsp;x&nbsp;8</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>Signed</code></td><td><code>12</code></td><td><code>8</code></td><td><code>13</code></td><td><code>No</code></td><td><code>-1</code></td><td><code>1</code></td></tr>
+</table>
+</html>
